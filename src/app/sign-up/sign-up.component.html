@@ -1,0 +1,45 @@
+<div class="signup-container">
+    <h2>User Registration
+    </h2>
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm.value)">
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" name="username" ngModel />
+          </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="John Doe" name="name" ngModel required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="john.doe@example.com" type="email" name="email" ngModel required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="1234567890" type="tel" name="phone" ngModel />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>User Type</mat-label>
+        <input matInput placeholder="e.g., Admin, User" name="userType" ngModel />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Employee Type</mat-label>
+        <input matInput placeholder="e.g., Full-Time, Part-Time" name="employeeType" ngModel />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Joining Date</mat-label>
+        <input matInput [matDatepicker]="picker" name="joiningDate" ngModel />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+  
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>
+  

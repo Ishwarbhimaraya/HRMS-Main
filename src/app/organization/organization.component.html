@@ -1,0 +1,35 @@
+<div >
+    <table mat-table [dataSource]="organs" class="mat-elevation-z8">
+        <!-- <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let orga"> {{ orga.id }} </td>
+      </ng-container> -->
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let orga"> {{ orga.name }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="location">
+            <th mat-header-cell *matHeaderCellDef> Location </th>
+            <td mat-cell *matCellDef="let orga"> {{ orga.location }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let orga"> {{ orga.description }} </td>
+        </ng-container>
+       
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let orga">
+            <button mat-button color="primary" (click)="updateOrg(orga.id)">update</button>
+          <button mat-button color="warn" (click)="deleteOrg(orga.id)">Delete</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['name', 'location', 'description',  'actions']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['name', 'location', 'description','actions'];"></tr>
+        </table>
+</div>
+<button mat-raised-button color="primary" (click)="addOrganizations()">Add Organization</button>

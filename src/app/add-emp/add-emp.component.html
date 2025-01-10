@@ -1,0 +1,47 @@
+<div>
+    <h3>Create New Employee</h3>
+    <form (ngSubmit)="createEmployee()">
+        <label for="name">Name:</label>
+        <input id="name" [(ngModel)]="newEmployee.name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="newEmployee.email" name="email" required />
+
+        <label for="phone">Phone:</label>
+        <input id="phone" [(ngModel)]="newEmployee.phone" name="phone" />
+
+        <label for="userType">User Type:</label>
+        <input id="userType" [(ngModel)]="newEmployee.userType" name="userType" />
+
+        <label for="employeeType">Employee Type:</label>
+        <input id="employeeType" [(ngModel)]="newEmployee.employeeType" name="employeeType" />
+
+        <label for="joiningDate">Joining Date:</label>
+        <input id="joiningDate" type="date" [(ngModel)]="newEmployee.joiningDate" name="joiningDate" />
+
+        <label for="location">Location:</label>
+        <input id="location" [(ngModel)]="newEmployee.location" name="location" />
+
+        <label for="username">Username:</label>
+        <input id="username" [(ngModel)]="newEmployee.username" name="username" />
+
+        <!-- <label for="password">Password:</label>
+        <input id="password" type="password" [(ngModel)]="newEmployee.password" name="password" /> -->
+        <label for="password">Password:</label>
+        <div class="password-wrapper">
+            <input id="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="newEmployee.password"
+                name="password" />
+            <button type="button" class="toggle-password" (click)="togglePasswordVisibility()">
+                <i [class]="showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+            </button>
+        </div>
+
+        <label for="isAdmin">Is Admin:</label>
+        <select id="isAdmin" [(ngModel)]="newEmployee.isAdmin" name="isAdmin">
+            <option [value]="true">isAdmin</option>
+            <option [value]="false">Employee</option>
+        </select>
+
+        <button mat-raised-button color="primary" type="submit">Create</button>
+    </form>
+</div>

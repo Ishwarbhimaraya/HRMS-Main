@@ -1,0 +1,48 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .home-content {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #3f51b5;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+
+  .navbar-button {
+    font-size: 14px;             /* Smaller font for navbar */
+    font-weight: 500;            /* Medium font weight */
+    color: rgba(255, 255, 255, 0.8); /* Light white text with transparency */
+    background-color: transparent; /* Transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+    border-radius: 5px;          /* Subtle rounding */
+    padding: 5px 12px;           /* Smaller padding */
+    transition: all 0.3s ease;   /* Smooth transitions */
+  }
+  
+  .navbar-button:hover {
+    color: #ffffff;              /* Full white text on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly opaque background */
+    border-color: #ffffff;       /* Full white border on hover */
+  }
+  
+  .navbar-button:active {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on click */
+  }
+  
+  
+  
